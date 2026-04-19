@@ -1,0 +1,27 @@
+/* src/components/HoloCard/HoloCard.module.css */
+.cardContainer {
+  perspective: 1000px; /* Creates the 3D space */
+  width: 300px;
+  height: 450px;
+  position: relative;
+  cursor: grab;
+}
+
+.holoSheen {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  border-radius: 0.75rem;
+  /* The "Metal" Gradient */
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(255, 215, 0, 0.4) 40%, /* Gold tint */
+    rgba(255, 255, 255, 0.8) 45%, /* Sharp Shine */
+    rgba(255, 215, 0, 0.4) 50%, 
+    transparent 80%
+  );
+  mix-blend-mode: overlay; /* Blends with the image */
+  background-size: 200% 200%;
+  pointer-events: none;
+}
